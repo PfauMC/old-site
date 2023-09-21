@@ -13,6 +13,7 @@ document.addEventListener('mousemove', e => {
 document.addEventListener('deviceorientation', e => {
 	const x = e.beta;
 	const y = e.gamma;
+	const z = e.alpha;
 
 	document.getElementsByClassName('xtxt')[0].innerText = "X: " + x;
 	document.getElementsByClassName('ytxt')[0].innerText = "Y: " + y;
