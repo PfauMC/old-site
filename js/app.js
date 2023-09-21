@@ -6,3 +6,15 @@ document.addEventListener('mousemove', e => {
 		`
 	})
 })
+
+document.addEventListener('deviceorientation', e => {
+	const x = e.beta;
+	const y = e.gamma;
+
+	Object.assign(document.documentElement, {
+		style: `
+		--move-x: ${(x - window.innerWidth / 2) * -.005}deg;
+		--move-y: ${(y - window.innerHeight / 2) * .01}deg;
+		`
+	})
+})
